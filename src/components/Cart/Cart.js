@@ -2,6 +2,7 @@ import classes from './Cart.module.css';
 import Modal from '../UI/Modal';
 import { useContext } from 'react';
 import CartContext from '../../store/cart-context';
+
 const Cart = (props) => {
   const { totalAmount } = useContext(CartContext);
   console.log(totalAmount);
@@ -12,6 +13,7 @@ const Cart = (props) => {
       ))}
     </ul>
   );
+
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
